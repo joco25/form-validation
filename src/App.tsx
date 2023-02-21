@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import './App.css'
+import Card from './components/card/Card';
+import CustomInput from './components/inputs/CustomInput'
+import { ICourse } from './components/inputs/helpers/course.interface';
 
 function App() {
+  const [course, setCourse] = useState<ICourse|null>(null);
+  const [errorMessage, setErrorMessage] = useState("")
+  const onSubmit = (value:ICourse)=>{
+    if(value.isValid){
+      setCourse(value);
+    }else{
+      setErrorMessage(value.errorMsg);
+    }
+  }
+  
+  const handleFocus = ()=>{
+    setCourse(null);
+    if(errorMessage){
+      setErrorMessage("");
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <CustomInput  
+        {...{
+          onSubmit,
+          label:'Course', 
+          placeholder:'Enter Text',
+          errorMessage,
+          handleFocus
+        }}
+      />
+      {
+        course?.details &&
+          (
+            <Card {...{...course.details}} />
+          )
+      }
     </div>
   );
 }

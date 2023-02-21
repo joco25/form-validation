@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <div
+      class="card__title"
+    >
+      Computer Science
+       
+      101
+    </div>
+    <div
+      class="card__container"
+    >
+      <div
+        class="row"
+      >
+        <span
+          class="column"
+        >
+          Department:
+        </span>
+        <span
+          class="column"
+        >
+          Computer Science
+        </span>
+      </div>
+      <div
+        class="row"
+      >
+        <span
+          class="column"
+        >
+          Course:
+        </span>
+        <span
+          class="column"
+        >
+          101
+        </span>
+      </div>
+      <div
+        class="row"
+      >
+        <span
+          class="column"
+        >
+          Year:
+        </span>
+        <span
+          class="column"
+        >
+          2022
+        </span>
+      </div>
+      <div
+        class="row"
+      >
+        <span
+          class="column"
+        >
+          Semester:
+        </span>
+        <span
+          class="column"
+        >
+          Spring
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

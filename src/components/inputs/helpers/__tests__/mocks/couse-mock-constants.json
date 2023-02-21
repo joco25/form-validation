@@ -1,0 +1,66 @@
+{
+    "yearAndSemesterTest1":{
+        "testString": "Fall 2020",
+        "expectedOutput":{
+            "year": 2020,
+            "semester": "Fall"
+        }
+    },
+    "yearAndSemesterTest2":{
+        "testString": "BOOM",
+        "expectedOutput": false
+    },
+    "yearAndSemesterTest3":{
+        "testString": "2022S",
+        "expectedOutput":{
+            "year": 2022,
+            "semester": "Spring"
+        }
+    },
+    "yearAndSemesterTest4":{
+        "testString": "Orange2092",
+        "expectedOutput": false
+    },
+    "yearAndSemesterTest5":{
+        "testString": "F289",
+        "expectedOutput": false
+    },
+    "departmentAndCourseNumberTest1":{
+        "testString":"cs101",
+        "expectedOutput":{
+            "department":"CS",
+            "courseNumber": 101
+        }
+    },
+    "departmentAndCourseNumberTest2":{
+        "testString":"302BA",
+        "expectedOutput":false
+    },
+    "departmentAndCourseNumberTest3":{
+        "testString":"BA:122",
+        "expectedOutput":{
+            "department":"BA",
+            "courseNumber": 122
+        }
+    },
+    "departmentAndCourseNumberTest4":{
+        "testString":"BA=122",
+        "expectedOutput":false
+    },
+    "normalizeAndVerifySemester1":{
+        "testString":"F",
+        "expectedOutput": "Fall"
+    },
+    "normalizeAndVerifySemester2":{
+        "testString":"down",
+        "expectedOutput": false
+    },
+    "normalizeYear1":{
+        "testString": "14",
+        "expectedOutput": 2014
+    },
+    "normalizeYear2":{
+        "testString": "2023",
+        "expectedOutput": 2023
+    }
+}
